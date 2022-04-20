@@ -1,34 +1,38 @@
 package com.ea.SpringBasic.libraries;
+
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Profile;
+import org.springframework.context.annotation.Scope;
 
 @Configuration
+@Profile("!remote")
 public class WebDriverLibrary {
 
     @Bean
     @ConditionalOnProperty(name = "browser", havingValue = "chrome")
-    public WebDriver getChromeDriver(){
+    public WebDriver getChromeDriver() {
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless");
         WebDriverManager.chromedriver().setup();
-        return new ChromeDriver();
+        return new ChromeDriver(chromeOptions);
     }
 
     @Bean
-      @ConditionalOnProperty(name = "browser", havingValue = "firefox")
-    public WebDriver getFirefoxDriver(){
-        WebDriverManager.firefoxdriver() ;
+    @Scope("browserscope")
+    @ConditionalOnProperty(name = "browser", havingValue = "firefox")
+    public WebDriver getFirefoxDriver() {
+        //chromeOptions.addArguments("--headless");
+        WebDriverManager.firefoxdriver().setup();
         return new FirefoxDriver();
     }
-    @Bean
-    @ConditionalOnProperty(name = "browser", havingValue = "edge")
-    public WebDriver getEdgeDriver(){
-        WebDriverManager.edgedriver() ;
-        return new EdgeDriver();
-    }
+
+
 }

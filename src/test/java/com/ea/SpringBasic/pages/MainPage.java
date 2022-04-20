@@ -1,12 +1,13 @@
 package com.ea.SpringBasic.pages;
 
+import com.ea.SpringBasic.annotation.PageScope;
 import org.openqa.selenium.WebDriver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Lazy;
 
-@Component
-
+@Lazy
+@PageScope
 public class MainPage extends BasePage{
     @Autowired
     private HomePage homePage;
@@ -24,5 +25,8 @@ public class MainPage extends BasePage{
         homePage.clickLogin();
         loginPage.Login("admin","password");
         loginPage.clickLogin();
+    }
+    public void PerformLogoff() {
+        homePage.clickLogOff();
     }
 }

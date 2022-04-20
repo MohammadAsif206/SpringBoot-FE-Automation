@@ -45,4 +45,9 @@ public class LoginSteps {
     public void iShouldSeeTheUserformPage() {
         Assert.assertEquals(homePage.isEmployeeDetailsExists(),true);
     }
+
+    @And("I click logout link")
+    public void iClickLogoutLink() {
+        homePage.clickLogOff();
+    }
 }
