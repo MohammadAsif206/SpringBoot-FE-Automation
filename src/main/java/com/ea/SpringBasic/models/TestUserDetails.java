@@ -1,13 +1,14 @@
 package com.ea.SpringBasic.models;
 
+
 import io.cucumber.spring.ScenarioScope;
 import org.springframework.stereotype.Component;
-
 
 @Component
 @ScenarioScope
 public class TestUserDetails {
-    private  UserDetails userDetails;
+
+    private UserDetails userDetails;
 
     public UserDetails getUserDetails() {
         return userDetails;

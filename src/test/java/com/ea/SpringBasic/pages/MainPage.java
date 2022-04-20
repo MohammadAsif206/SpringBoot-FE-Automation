@@ -1,32 +1,38 @@
 package com.ea.SpringBasic.pages;
 
+
 import com.ea.SpringBasic.annotation.PageScope;
 import org.openqa.selenium.WebDriver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Lazy;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 @Lazy
 @PageScope
-public class MainPage extends BasePage{
-    @Autowired
-    private HomePage homePage;
+public class MainPage {
+
     @Autowired
     private LoginPage loginPage;
 
     @Autowired
+    private HomePage homePage;
+
+    @Autowired
     private WebDriver webDriver;
 
-    @Value("${app.url}")
-    private String appUrl;
+    public void PerformLogin() {
 
-    public void performance(){
-        webDriver.navigate().to(appUrl);
-        homePage.clickLogin();
-        loginPage.Login("admin","password");
-        loginPage.clickLogin();
+        webDriver.navigate().to("http://eaapp.somee.com");
+        homePage.ClickLogin();
+        loginPage.Login("admin", "password");
+        loginPage.ClickLogin();
     }
+
     public void PerformLogoff() {
-        homePage.clickLogOff();
+        homePage.ClickLogout();
     }
 }

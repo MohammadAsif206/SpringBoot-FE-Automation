@@ -1,16 +1,17 @@
 package com.ea.SpringBasic.models;
 
 public class UserDetails {
-    private String userName;
-    private  String password;
 
-    public UserDetails(String userName, String password) {
-        this.userName = userName;
+    private String username;
+    private String password;
+
+    public UserDetails(String username, String password) {
+        this.username = username;
         this.password = password;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
     public String getPassword() {

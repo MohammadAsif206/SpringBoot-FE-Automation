@@ -12,7 +12,7 @@ public abstract class BasePage {
     private WebDriver webDriver;
 
     @PostConstruct
-    public void initPage(){
-        PageFactory.initElements(webDriver,this);
+    public void InitPage() {
+        PageFactory.initElements(webDriver, this);
     }
 }

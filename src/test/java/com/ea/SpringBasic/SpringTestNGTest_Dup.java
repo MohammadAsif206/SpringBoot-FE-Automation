@@ -7,7 +7,10 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
-import org.testng.annotations.*;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
 
 @SpringBootTest
@@ -17,27 +20,23 @@ public class SpringTestNGTest_Dup extends AbstractTestNGSpringContextTests {
     @Autowired
     private WebDriver webDriver;
 
-    @Autowired
-    private MainPage mainPage;
-
     @Value("${app.url}")
     private String appUrl;
 
+    @Autowired
+    private MainPage mainPage;
 
     @BeforeTest
-    protected void setUpWebDriver(){
+    protected void setupWebDriver(){
         webDriver.navigate().to(appUrl);
     }
 
     @Test
-    public void testLogin() throws InterruptedException {
-        mainPage.performance();
+    public void testLogin() {
+        mainPage.PerformLogin();
     }
-//
-//    @AfterTest
-//    public void tearDown(){
-//        webDriver.close();
-//    }
+
+
 
     @BeforeClass(alwaysRun = true)
     @BeforeSuite(alwaysRun = true)

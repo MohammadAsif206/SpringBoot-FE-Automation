@@ -9,15 +9,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class HomeSteps {
 
     @Autowired
-    LoginPage loginPage;
+    private LoginPage loginPage;
 
     @Autowired
     private TestUserDetails testUserDetails;
+
     @And("I enter the following for Login")
-    public void iEnterTheFollowingForLogin(DataTable table) throws InterruptedException {
+    public void iEnterTheFollowingForLogin(DataTable table) {
         //var data = table.asList();
-
-        loginPage.Login(testUserDetails.getUserDetails().getUserName(),testUserDetails.getUserDetails().getPassword());
-
+        loginPage.Login(testUserDetails.getUserDetails().getUsername(), testUserDetails.getUserDetails().getPassword());
     }
 }

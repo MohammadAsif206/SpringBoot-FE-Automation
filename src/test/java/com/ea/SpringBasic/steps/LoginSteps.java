@@ -8,8 +8,7 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.By;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.Assert;
 
@@ -19,35 +18,36 @@ public class LoginSteps {
     public HomePage homePage;
 
     @Autowired
-    public  LoginPage loginPage;
+    public LoginPage loginPage;
 
     @Autowired
     private TestUserDetails testUserDetails;
 
+    @Given("I click login in Home Page")
+    public void iClickLoginInHomePage() {
 
-    @Given("I click login in the home page")
-    public void iClickLoginInTheHomePage() {
-        homePage.clickLogin();
+        homePage.ClickLogin();
 
-        //Scenario Scope
-        testUserDetails.setUserDetails(new UserDetails("admin","password"));
-
+        //Scenario scope
+        testUserDetails.setUserDetails(new UserDetails("admin", "password"));
     }
 
-    @And("I click login button")
-    public void iClickLoginButton() throws InterruptedException {
-       // Thread.sleep(2000);
-        loginPage.clickLogin();
 
+
+    @And("I click login button")
+    public void iClickLoginButton() {
+        loginPage.ClickLogin();
     }
 
     @Then("I should see the userform page")
     public void iShouldSeeTheUserformPage() {
-        Assert.assertEquals(homePage.isEmployeeDetailsExists(),true);
+        Assert.assertEquals(homePage.isEmployeeDetailsExist() , true);
+
     }
+
 
     @And("I click logout link")
     public void iClickLogoutLink() {
-        homePage.clickLogOff();
+        homePage.ClickLogout();
     }
 }
