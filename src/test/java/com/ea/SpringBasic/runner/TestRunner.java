@@ -7,8 +7,8 @@ import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
         features = {"src/test/java/com/ea/SpringBasic/features"},
-       // plugin = {"json:target/cucumber-report.json", "pretty"},
-        plugin = {"target/cucumber-report-html/cucumber-report","pretty"},
+        plugin = {"json:target/cucumber-report-html/cucumber-html-report", "pretty"},
+        //plugin = {"target/cucumber-report-html/cucumber-report","pretty"},
         glue = "com.ea.SpringBasic.steps",
         tags = "@PAGE"
 )
