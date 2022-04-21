@@ -1,0 +1,502 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2022-04-21T14:12:31.752Z",
+        "before": [
+          {
+            "result": {
+              "duration": 22226436000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.ea.SpringBasic.steps.Hooks.InitializeTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "Login with correct username and password",
+        "description": "",
+        "id": "loginfeature;login-with-correct-username-and-password",
+        "after": [
+          {
+            "result": {
+              "duration": 1991194000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.ea.SpringBasic.steps.Hooks.TearDownTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1601172000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I click login in Home Page",
+            "match": {
+              "location": "com.ea.SpringBasic.steps.LoginSteps.iClickLoginInHomePage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 512137000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I enter the following for Login",
+            "match": {
+              "location": "com.ea.SpringBasic.steps.HomeSteps.iEnterTheFollowingForLogin(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "username",
+                  "password"
+                ]
+              },
+              {
+                "cells": [
+                  "admin",
+                  "password"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1325274000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I click login button",
+            "match": {
+              "location": "com.ea.SpringBasic.steps.LoginSteps.iClickLoginButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 246446000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I should see the userform page",
+            "match": {
+              "location": "com.ea.SpringBasic.steps.LoginSteps.iShouldSeeTheUserformPage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1370687000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I click logout link",
+            "match": {
+              "location": "com.ea.SpringBasic.steps.LoginSteps.iClickLogoutLink()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@PAGE"
+          },
+          {
+            "name": "@Scenario1F1"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-21T14:12:31.747Z",
+        "before": [
+          {
+            "result": {
+              "duration": 22190369000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.ea.SpringBasic.steps.Hooks.InitializeTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "Login with correct username and password 2",
+        "description": "",
+        "id": "loginfeature;login-with-correct-username-and-password-2",
+        "after": [
+          {
+            "result": {
+              "duration": 2452529000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.ea.SpringBasic.steps.Hooks.TearDownTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1312523000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I click login in Home Page",
+            "match": {
+              "location": "com.ea.SpringBasic.steps.LoginSteps.iClickLoginInHomePage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 438640000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I enter the following for Login",
+            "match": {
+              "location": "com.ea.SpringBasic.steps.HomeSteps.iEnterTheFollowingForLogin(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "username",
+                  "password"
+                ]
+              },
+              {
+                "cells": [
+                  "admin",
+                  "password2"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1355150000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I click login button",
+            "match": {
+              "location": "com.ea.SpringBasic.steps.LoginSteps.iClickLoginButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 301289000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I should see the userform page",
+            "match": {
+              "location": "com.ea.SpringBasic.steps.LoginSteps.iShouldSeeTheUserformPage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1254487000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I click logout link",
+            "match": {
+              "location": "com.ea.SpringBasic.steps.LoginSteps.iClickLogoutLink()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@PAGE"
+          },
+          {
+            "name": "@Scenario2F1"
+          }
+        ]
+      }
+    ],
+    "name": "LoginFeature",
+    "description": "  This feature deals with the login functionality of the application",
+    "id": "loginfeature",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/com/ea/SpringBasic/features/Login.feature",
+    "tags": [
+      {
+        "name": "@PAGE",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2022-04-21T14:12:31.716Z",
+        "before": [
+          {
+            "result": {
+              "duration": 21940185000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.ea.SpringBasic.steps.Hooks.InitializeTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "Login with correct username and password",
+        "description": "",
+        "id": "loginfeature;login-with-correct-username-and-password",
+        "after": [
+          {
+            "result": {
+              "duration": 2427544000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.ea.SpringBasic.steps.Hooks.TearDownTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1730019000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I click login in Home Page",
+            "match": {
+              "location": "com.ea.SpringBasic.steps.LoginSteps.iClickLoginInHomePage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 486934000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I enter the following for Login",
+            "match": {
+              "location": "com.ea.SpringBasic.steps.HomeSteps.iEnterTheFollowingForLogin(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "username",
+                  "password"
+                ]
+              },
+              {
+                "cells": [
+                  "admin",
+                  "password"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1423939000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I click login button",
+            "match": {
+              "location": "com.ea.SpringBasic.steps.LoginSteps.iClickLoginButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 128421000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I should see the userform page",
+            "match": {
+              "location": "com.ea.SpringBasic.steps.LoginSteps.iShouldSeeTheUserformPage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1195120000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I click logout link",
+            "match": {
+              "location": "com.ea.SpringBasic.steps.LoginSteps.iClickLogoutLink()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@PAGE"
+          },
+          {
+            "name": "@Scenario1F2"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-04-21T14:12:31.752Z",
+        "before": [
+          {
+            "result": {
+              "duration": 22304662000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.ea.SpringBasic.steps.Hooks.InitializeTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "Login with correct username and password 2",
+        "description": "",
+        "id": "loginfeature;login-with-correct-username-and-password-2",
+        "after": [
+          {
+            "result": {
+              "duration": 2532892000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.ea.SpringBasic.steps.Hooks.TearDownTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1145185000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I click login in Home Page",
+            "match": {
+              "location": "com.ea.SpringBasic.steps.LoginSteps.iClickLoginInHomePage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 337299000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I enter the following for Login",
+            "match": {
+              "location": "com.ea.SpringBasic.steps.HomeSteps.iEnterTheFollowingForLogin(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "username",
+                  "password"
+                ]
+              },
+              {
+                "cells": [
+                  "admin",
+                  "password2"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1008619000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I click login button",
+            "match": {
+              "location": "com.ea.SpringBasic.steps.LoginSteps.iClickLoginButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 249875000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I should see the userform page",
+            "match": {
+              "location": "com.ea.SpringBasic.steps.LoginSteps.iShouldSeeTheUserformPage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1462591000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I click logout link",
+            "match": {
+              "location": "com.ea.SpringBasic.steps.LoginSteps.iClickLogoutLink()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@PAGE"
+          },
+          {
+            "name": "@Scenario2F2"
+          }
+        ]
+      }
+    ],
+    "name": "LoginFeature",
+    "description": "  This feature deals with the login functionality of the application",
+    "id": "loginfeature",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/com/ea/SpringBasic/features/LoginDup.feature",
+    "tags": [
+      {
+        "name": "@PAGE",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
